@@ -20,7 +20,7 @@ const Portfolio: FC = (): JSX.Element => {
         <AnimatedTitle text="Go back and check my media" />
       </div>
 
-      <Link to="links" className="mb-auto  px-7 py-3 ">
+      <Link to="/" className="mb-auto  px-7 py-3 ">
         <motion.button
           className="bg-rose-900 mb-auto flex items-center gap-3 px-7 py-3 rounded-md"
           whileHover={{ scale: 1.1 }}

@@ -8,8 +8,8 @@ const Links = React.lazy(() => import("./views/Links"));
 const Router: FC = () => {
   const location = useLocation();
   const routing = useRoutes([
-    { path: "/", element: <PortFolio /> },
-    { path: "links", element: <Links /> },
+    { path: "/", element: <Links /> },
+    { path: "Home", element: <PortFolio /> },
   ]);
 
   if (!routing) return null;

@@ -17,7 +17,7 @@ export const urls: urlInterface[] = [
   {
     text: "Portfolio",
     logo: faGlobe,
-    link: "/",
+    link: "Home",
   },
   {
     text: "Resume",
