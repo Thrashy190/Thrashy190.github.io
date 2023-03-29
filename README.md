@@ -4,7 +4,7 @@ Helloooo budy my name is Diego I´m Proudly Mexican and I´m a Fullstack develop
 
 If you wanna know more about me check the link down here:
 
-[Link]https://thrashy190.github.io/
+[Link](https://thrashy190.github.io/)
 
 
 ## Is build with:
