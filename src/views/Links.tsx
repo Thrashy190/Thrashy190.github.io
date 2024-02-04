@@ -18,7 +18,7 @@ const Links: FC = (): JSX.Element => {
   const isPresent = useIsPresent();
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 m-auto h-screen">
-      <div className="gap-2 flex flex-col items-center mb-6 lg:m-auto">
+      <div className="gap-2 flex flex-col items-center mb-2 mt-20 lg:m-auto sm:mb-6 sm:mt-2">
         <img
           className=" h-28 w-28 lg:h-52 lg:w-52 rounded-full"
           src={img}
@@ -38,12 +38,22 @@ const Links: FC = (): JSX.Element => {
         </div>
       </div>
       <div className="flex flex-col gap-4 lg:my-auto lg:mr-10">
-        {urls.map(({ text, link, logo }: urlInterface, index) => {
-          return <LinkMedia key={index} text={text} link={link} logo={logo} />;
+        {urls.map(({ text, link, logo, target }: urlInterface, index) => {
+          return (
+            <LinkMedia
+              key={index}
+              text={text}
+              link={link}
+              logo={logo}
+              target={target}
+            />
+          );
         })}
         <div className="flex flex-row  justify-center gap-4  mt-6">
-          {media.map(({ link, logo }: urlInterface, index) => {
-            return <Social key={index} link={link} logo={logo} />;
+          {media.map(({ link, logo, target }: urlInterface, index) => {
+            return (
+              <Social key={index} link={link} logo={logo} target={target} />
+            );
           })}
         </div>
         <div className="flex flex-col items-center">

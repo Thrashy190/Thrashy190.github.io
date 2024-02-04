@@ -2,25 +2,18 @@ import { useEffect } from "react";
 import styled from "styled-components";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import animateTExtInterface from "../interfaces/animateTextInterface";
-
-const Title = styled.h2`
-  font-size: 3rem;
-  font-weight: 600;
-`;
+import animateTextInterface from "../interfaces/animateTextInterface";
 
 const Word = styled(motion.span)`
-  display: inline-block;
   margin-right: 0.25em;
   white-space: nowrap;
 `;
 
 const Character = styled(motion.span)`
-  display: inline-block;
   margin-right: -0.05em;
 `;
 
-export default function AnimatedTitle({ text }: animateTExtInterface) {
+export default function AnimatedTitle({ text }: animateTextInterface) {
   const ctrls = useAnimation();
 
   const { ref, inView } = useInView({
@@ -56,7 +49,11 @@ export default function AnimatedTitle({ text }: animateTExtInterface) {
     },
   };
   return (
-    <Title aria-label={text} role="heading">
+    <h2
+      className="text-3xl py-2 lg:text-6xl font-bold"
+      aria-label={text}
+      role="heading"
+    >
       {text.split(" ").map((word, index) => {
         return (
           <Word
@@ -85,6 +82,6 @@ export default function AnimatedTitle({ text }: animateTExtInterface) {
           </Word>
         );
       })}
-    </Title>
+    </h2>
   );
 }

@@ -20,7 +20,6 @@
 
 body {
   margin: 0;
-  padding: 10px;
 }
 
 .privacy-screen {
@@ -39,4 +38,57 @@ body {
   border-radius: 50px;
   background: #881337;
   cursor: pointer;
+}
+
+.progress-bar {
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: white;
+  transform-origin: 0%;
+}
+
+.scroller__inner {
+  padding-block: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.scroller {
+  overflow: hidden;
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent
+  );
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.scroller .scroller__inner {
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: scroll var(--_animation-duration, 55s)
+    var(--_animation-direction, forwards) linear infinite;
+}
+
+.scroll-right {
+  --_animation-direction: reverse;
+}
+
+.scroll-left {
+  --_animation-direction: forwards;
+}
+
+.scroller-slow {
+  --_animation-duration: 50s;
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 0.5rem));
+  }
 }

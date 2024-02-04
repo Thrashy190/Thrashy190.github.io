@@ -4,4 +4,6 @@ export default interface urlInterface {
   text?: string;
   logo: IconDefinition;
   link: string;
+  target?:string
+
 }
