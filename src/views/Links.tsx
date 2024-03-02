@@ -34,7 +34,7 @@ const Links: FC = (): JSX.Element => {
           <div className="text-xl font-light">Computer science student</div>
         </div>
         <div className="text-xs font-light display hidden lg:block">
-          © 2023 Thrashy
+          © 2024 Thrashy
         </div>
       </div>
       <div className="flex flex-col gap-4 lg:my-auto lg:mr-10">
@@ -58,7 +58,7 @@ const Links: FC = (): JSX.Element => {
         </div>
         <div className="flex flex-col items-center">
           <div className=" text-xs font-light display block lg:hidden">
-            © 2023 Thrashy
+            © 2024 Thrashy
           </div>
         </div>
       </div>

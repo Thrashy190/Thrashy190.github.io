@@ -18,7 +18,7 @@ const Router: FC = () => {
     <AnimatePresence mode="wait" initial={false}>
       <Routes location={location} key={location.key}>
         <Route path="/" element={<Links />} />
-        <Route path="/Home" element={<PortFolio />} />
+        <Route path="/home" element={<PortFolio />} />
       </Routes>
     </AnimatePresence>
   );

@@ -36,7 +36,8 @@ const Portfolio: FC = (): JSX.Element => {
             <AnimatedTitle text="Lopez Martinez" />
           </div>
           <div className="flex  justify-between items-center text-xl pt-5 font-light text-white gap-2">
-            <InfiniteCarousel styles="max-w-3xl scroll-right scroll-slow hidden lg:block">
+            <InfiniteCarousel styles="max-w-2xl scroll-right scroll-slow hidden lg:block">
+              <span>|</span>
               <div>FullStack Developer</div>
               <span>|</span>
               <div>Student</div>
@@ -44,7 +45,6 @@ const Portfolio: FC = (): JSX.Element => {
               <div>Gamer</div>
               <span>|</span>
               <div>Streamer</div>
-              <span>|</span>
             </InfiniteCarousel>
           </div>
           <div className="flex flex-col justify-between items-center gap-2 text-xl pt-5 font-light text-white lg:hidden">
@@ -253,21 +253,6 @@ const Portfolio: FC = (): JSX.Element => {
             );
           })}
         </InfiniteCarousel>
-
-        <IconList
-          icons={[
-            "ts",
-            "react",
-            "nextjs",
-            "nestjs",
-            "nodejs",
-            "postgres",
-            "prisma",
-            "graphql",
-            "aws",
-          ]}
-          title="My Main Stack"
-        ></IconList>
 
         <IconList
           icons={[
