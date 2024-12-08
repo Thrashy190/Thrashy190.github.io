@@ -14,7 +14,7 @@ import Lexical from "../../assets/projects/lexical-syntactic-analyzer.webp";
 interface Project {
   id: number;
   title: string;
-  description: string;
+  description: JSX.Element | string;
   image: string;
   githubLink: string;
   liveLink?: string;
@@ -25,7 +25,8 @@ const projects: Project[] = [
   {
     id: 1,
     title: "AtomDB",
-    description: "Base datos hecha en C/C++ inpirtada en SQLite",
+    description:
+      "A minimalist, high-performance database management system implemented in C, inspired by SQLite's architecture. AtomDB features a sophisticated B-tree data structure for efficient data insertion and retrieval operations. The project demonstrates advanced low-level programming skills, focusing on creating a lightweight and fast database solution with core database functionality.",
     image: AtomDB,
     githubLink: "https://github.com/Thrashy190/AtomDB",
     technologies: ["C", "Makefile", "Bash", "Linux"],
@@ -34,7 +35,7 @@ const projects: Project[] = [
     id: 2,
     title: "Cosmos CMS",
     description:
-      "Headless CMS hecho en Rust con Rocket y PostgreSQL como base de datos.",
+      "A high-performance, headless Content Management System (CMS) developed in Rust, designed with a strong emphasis on efficiency and speed. Cosmos CMS offers robust integration with PostgreSQL databases and provides comprehensive features including file management, authentication, and scalable content handling. The project leverages Rust's performance capabilities to create a modern, secure, and flexible content management solution.",
     image: Cosmos,
     githubLink: "https://github.com/Thrashy190/Cosmos",
     technologies: ["Rust", "PostgreSQL", "Rocket"],
@@ -42,8 +43,25 @@ const projects: Project[] = [
   {
     id: 5,
     title: "Arqontact",
-    description:
-      "Una aplicación web para gestionar tareas diarias con características de arrastrar y soltar, etiquetas y recordatorios.",
+    description: (
+      <div>
+        <p className="mb-4">
+          A comprehensive web application tailored for architects, designed to
+          streamline material sourcing and project management processes.
+          Arqontact serves two primary functions:
+        </p>
+        <ul className="list-disc px-5">
+          <li>
+            A marketplace connecting architects with material providers and
+            service professionals
+          </li>
+          <li>
+            An integrated project management tool that enables seamless internal
+            vendor tracking and collaboration
+          </li>
+        </ul>
+      </div>
+    ),
     image: Arqontact,
     githubLink: "https://github.com/Thrashy190/arqontact-web",
     liveLink: "https://arqontact-web.vercel.app/",
@@ -59,8 +77,24 @@ const projects: Project[] = [
   {
     id: 6,
     title: "Information Center API",
-    description:
-      "Una aplicación web para gestionar tareas diarias con características de arrastrar y soltar, etiquetas y recordatorios.",
+    description: (
+      <div>
+        <p className="mb-4">
+          A sophisticated API developed in Go, engineered to enhance library
+          information accessibility for both library staff and students.
+          Prioritizing performance, robustness, and security, this API
+          revolutionizes educational resource management by:
+        </p>
+        <ul className="list-disc px-5">
+          <li>Facilitating easy information retrieval</li>
+          <li>Supporting student project development</li>
+          <li>
+            Improving overall operational efficiency of the educational
+            information center
+          </li>
+        </ul>
+      </div>
+    ),
     image: ApiGolang,
     githubLink: "https://github.com/Thrashy190/info-center-api",
     technologies: ["Go", "PostgreSQL", "Gin"],
@@ -68,8 +102,20 @@ const projects: Project[] = [
   {
     id: 8,
     title: "Discord Bot",
-    description:
-      "Una aplicación web para gestionar tareas diarias con características de arrastrar y soltar, etiquetas y recordatorios.",
+    description: (
+      <div>
+        <p className="mb-4">
+          A versatile Discord server assistant developed in Go, offering a wide
+          range of functionalities:
+        </p>
+        <ul className="list-disc px-5">
+          <li>User management and moderation tools</li>
+          <li>Interactive gaming features</li>
+          <li>Integration with multiple external APIs</li>
+          <li>Real-time server interaction and engagement</li>
+        </ul>
+      </div>
+    ),
     image: DiscordBot,
     githubLink: "https://github.com/Thrashy190/PTR-Discord-Bot",
     technologies: ["Go", "Discord API"],
@@ -78,7 +124,7 @@ const projects: Project[] = [
     id: 9,
     title: "Artificil Vision Face Detection",
     description:
-      "Una aplicación web para gestionar tareas diarias con características de arrastrar y soltar, etiquetas y recordatorios.",
+      "A Python-based computer vision project focusing on facial recognition and emotion detection. The application demonstrates advanced image processing techniques, utilizing libraries for detecting facial features including eyes and smile, with a core emphasis on emotion recognition through visual analysis.",
     image: ArtificialVision,
     githubLink: "https://github.com/Thrashy190/artificial-vision-python",
     technologies: ["Python", "OpenCV"],
@@ -86,8 +132,21 @@ const projects: Project[] = [
   {
     id: 3,
     title: "Loading",
-    description:
-      "Una aplicación web para gestionar tareas diarias con características de arrastrar y soltar, etiquetas y recordatorios.",
+    description: (
+      <div>
+        <p className="mb-4">
+          A comprehensive web platform inspired by Udemy, specifically designed
+          for game development professionals and enthusiasts. The platform
+          enables users to create, sell, and purchase game development courses.
+          Key features include:
+        </p>
+        <ul className="list-disc px-5">
+          <li>Seamless Stripe payment integration</li>
+          <li>Firebase backend infrastructure</li>
+          <li>Specialized marketplace for game creation education</li>
+        </ul>
+      </div>
+    ),
     image: Loading,
     githubLink: "https://github.com/Thrashy190/software-Engineering",
     technologies: ["React", "Firebase", "Stripe", "TailwindCSS"],
@@ -95,8 +154,19 @@ const projects: Project[] = [
   {
     id: 4,
     title: "Avgi",
-    description:
-      "Una aplicación web para gestionar tareas diarias con características de arrastrar y soltar, etiquetas y recordatorios.",
+    description: (
+      <div>
+        <p className="mb-4">
+          An intelligent career guidance platform designed to support students
+          in:
+        </p>
+        <ul className="list-disc px-5">
+          <li>Discovering and exploring potential academic paths</li>
+          <li>Reducing academic dropout rates</li>
+          <li>Providing personalized learning resources</li>
+        </ul>
+      </div>
+    ),
     image: Avgi,
     githubLink: "https://github.com/Thrashy190/AVGI",
     liveLink: "https://hackathon-2022-b997c.web.app/",
@@ -107,7 +177,7 @@ const projects: Project[] = [
     id: 7,
     title: "Data Structures and Algorithms",
     description:
-      "Una aplicación web para gestionar tareas diarias con características de arrastrar y soltar, etiquetas y recordatorios.",
+      "An innovative educational platform focused on simplifying the learning of data structures and algorithms through interactive, graphical visualization. The platform transforms complex computational concepts into intuitive, visually engaging learning experiences, making advanced computer science topics more accessible and comprehensible.",
     image: DataStructures,
     githubLink: "https://github.com/Thrashy190/DataStructuresExample",
     liveLink: "https://thrashy190.github.io/DataStructuresExample/",
@@ -117,7 +187,7 @@ const projects: Project[] = [
     id: 10,
     title: "Lexical and Syntactic Analyzer",
     description:
-      "Una aplicación web para gestionar tareas diarias con características de arrastrar y soltar, etiquetas y recordatorios.",
+      "A sophisticated programming language analysis tool developed using Bison, Flex, and Python. The project aims to provide an in-depth understanding of lexical and syntactic parsing mechanisms, featuring a user-friendly interface for exploring language structure and compilation processes.",
     image: Lexical,
     githubLink: "https://github.com/Thrashy190/lexical-syntactic-analyzer",
     technologies: ["Python", "Bison", "Flex"],
@@ -209,14 +279,14 @@ const ProjectSection: FC = () => {
                 <h3 className="text-3xl font-medium mb-2 text-white">
                   {project.title}
                 </h3>
-                <p className="text-gray-300 mb-4 text-2xl">
+                <p className="text-gray-300 mb-4 text-xl">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech, index) => (
                     <span
                       key={index}
-                      className="px-2 py-1 bg-[#deccff] text-[#111827] rounded-full text-xs font-semibold"
+                      className="px-2 py-1 bg-[#deccff] text-[#111827] rounded-full text-sm"
                     >
                       {tech}
                     </span>

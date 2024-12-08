@@ -15,7 +15,7 @@ export default function ExperienceCard({
 }: ExperienceCardProps) {
   return (
     <motion.div
-      className="flex-shrink-0 w-[50rem] h-[30rem] bg-gradient-to-br from-[#1a2436] to-[#111827] rounded-lg shadow-lg overflow-hidden"
+      className="flex-shrink-0 w-[50rem] h-[45rem] bg-gradient-to-br from-[#1a2436] to-[#111827] rounded-lg shadow-lg overflow-hidden"
       whileHover={{ scale: 1.05 }}
       transition={{ duration: 0.3 }}
     >
@@ -43,9 +43,7 @@ export default function ExperienceCard({
             <span>{location}</span>
           </div>
         </div>
-
-        <p className="text-gray-200 mb-4 ">{description}</p>
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2 py-4">
           {skills.map((skill, index) => (
             <span
               key={index}
@@ -55,6 +53,7 @@ export default function ExperienceCard({
             </span>
           ))}
         </div>
+        <p className="text-gray-200 mb-4 pb-2 text-md ">{description}</p>
       </div>
     </motion.div>
   );
