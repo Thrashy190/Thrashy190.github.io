@@ -1,31 +1,23 @@
 import { FC } from "react";
-import {
-  Github,
-  Linkedin,
-  Twitter,
-  Instagram,
-  Mail,
-  Twitch,
-} from "lucide-react";
+import { Github, Linkedin, Instagram, Mail, Twitch } from "lucide-react";
 import { motion } from "framer-motion";
 
 const socialLinks = [
-  { name: "GitHub", icon: Github, url: "https://github.com/tuusuario" },
+  { name: "GitHub", icon: Github, url: "https://github.com/Thrashy190" },
   {
     name: "LinkedIn",
     icon: Linkedin,
-    url: "https://linkedin.com/in/tuusuario",
+    url: "https://www.linkedin.com/in/diegoalopezm/",
   },
-  { name: "Twitter", icon: Twitter, url: "https://twitter.com/tuusuario" },
   {
     name: "Instagram",
     icon: Instagram,
-    url: "https://instagram.com/tuusuario",
+    url: "https://www.instagram.com/_thrashy_/",
   },
   {
     name: "Twitch",
     icon: Twitch,
-    url: "https://instagram.com/tuusuario",
+    url: "https://www.twitch.tv/thrashy19",
   },
 ];
 
